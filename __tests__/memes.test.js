@@ -34,8 +34,19 @@ describe('meme routes', () => {
       });
   });
 
+  it('finds a meme by id', async() => {
+    const meme = await getMeme();
+
+    return request(app)
+      .get(`/api/v1/memes/${meme._id}`)
+      .then(res => {
+        expect(res.body).toEqual({
+          ...meme
+        });
+      });
+  });
+
 });
-// * `GET /api/v1/memes` to get all memes
 // * `GET /api/v1/memes/:id` to get a meme by id
 // * `PUT /api/v1/memes/:id` to update a meme
 // * `DELETE /api/v1/memes/:id` to delete a meme
