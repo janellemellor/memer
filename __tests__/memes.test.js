@@ -61,5 +61,4 @@ describe('meme routes', () => {
   });
 
 });
-// * `PUT /api/v1/memes/:id` to update a meme
 // * `DELETE /api/v1/memes/:id` to delete a meme
