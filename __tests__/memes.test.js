@@ -69,6 +69,4 @@ describe('meme routes', () => {
         expect(res.body).toEqual(meme);
       });
   });
-
 });
-// * `DELETE /api/v1/memes/:id` to delete a meme
